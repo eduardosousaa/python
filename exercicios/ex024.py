@@ -1,5 +1,5 @@
-cidade = str(input('Digite o nome da sua cidade: '))
+cidade = str(input('Digite o nome da sua cidade: ')).strip()
 
 dividido = cidade.split()
 dividido = dividido[0]
-print('Santo' in dividido)
+print('santo' in dividido.lower())
