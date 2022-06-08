@@ -1,13 +1,17 @@
-n1 = float(input('Digite um número: '))
-n2 = float(input('Digite um número: '))
-n3 = float(input('Digite um número: '))
-
-if n1 > n2 and n2 < n3:
-    print('{} é maior'.format(n1))
-    print('{} é menor'.format(n2))
-elif n2 > n1 and n3 < n1:
-    print('{} é maior'.format(n2))
-    print('{} é menor'.format(n3))
-elif n3 > n1 and n1 < n2:
-    print('{} é maior'.format(n3))
-    print('{} é menor'.format(n1))
+n1 = int(input('Digite um número: '))
+n2 = int(input('Digite um número: '))
+n3 = int(input('Digite um número: '))
+#Verifiacndo o menor
+menor = n1
+if n2 < n1 and n2 < n3:
+    menor = n2
+if n3 < n1 and n3 <n2:
+   menor = n3
+#Verifiacndo o maior
+maior = n1
+if n2 > n1 and n2 > n3:
+    maior = n2
+if n3 > n1 and n3 > n2:
+    maior = n3
+print('Menor número é o {}'.format(menor))
+print('Maior número é o {}'.format(maior))
