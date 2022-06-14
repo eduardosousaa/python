@@ -1,4 +1,7 @@
 primeiro = int(input('Digite o primeiro termo: '))
 razao = int(input('Digite a razão: '))
-for c in range(primeiro, 100, razao):
-    print(c)
+decimo = primeiro + (10 - 1) * razao
+decimo = decimo + razao
+for c in range(primeiro, decimo, razao):
+    print('{} ' .format(c), end='➝  ')
+print('Acabou')

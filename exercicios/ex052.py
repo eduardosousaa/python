@@ -1,6 +1,14 @@
-for c in range(0, 2):
-    num = int(input('Digite um número: '))
-    if num > 1 and num % 1 == 0 and num % num == 0:
-        print('O número {} é primo!'.format(num))
+num = int(input('Digite um número: '))
+total = 0
+for c in range(1, num + 1):
+    if num % c == 0:
+        print('\033[33m', end='')
+        total += 1
     else:
-        print('O número {} não é primo!'.format(num))
+        print('\033[31m', end='')
+    print('{} '.format(c), end='')
+print('\033[m''\nO número {} foi dividido {} vezes'.format(num, total))
+if total == 2:
+    print('Por isso ele é primo')
+else:
+    print('Por isso ele não é primo')
