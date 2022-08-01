@@ -1,13 +1,14 @@
-lista = list()
+lista = []
 for c in range(5):
-    v = int(input('Digite valores: '))
-    if c == 0 or v > lista[-1]:
-        lista.append(v)
+    num = int(input(f'Digite um valor na posição {c}: '))
+    if c == 0 or num > lista[-1]:
+        lista.append(num)
     else:
         pos = 0
         while pos < len(lista):
-            if v <= lista[pos]:
-                lista.insert(pos, v)
+            if num <= lista[pos]:
+                lista.insert(pos, num)
                 break
         pos += 1
-print(lista)
+
+print(f'Lista ordenada: {lista}')
